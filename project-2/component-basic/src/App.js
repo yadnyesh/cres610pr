@@ -3,9 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  sayHello(name){
+    return "Hello " + name;
+  }
+
   render() {
+    const myName = "Yadnyesh";
     return (
       <div className="App">
+        <h2> Sample Data for: {this.sayHello(myName)} </h2>
       </div>
     );
   }
