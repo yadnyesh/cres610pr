@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   render() {
@@ -16,6 +17,25 @@ class App extends Component {
         <Parent />
       </div>
     );
+  }
+}
+
+App.propTypes = {
+  // propObject: React.PropTypes.object,
+  // propString: React.PropTypes.string,
+  // propNumber: React.PropTypes.number
+  propObject: PropTypes.object,
+  propString: PropTypes.string,
+  propNumber: PropTypes.number
+}
+
+App.defaultProps = {
+  propNumber: 3,
+  propString: "This is prop String",
+  propObject: {
+    obj1: "I am object 1",
+    obj2: "I am object 2",
+    obj3: "I am object 3"
   }
 }
 
@@ -44,7 +64,7 @@ class Cars extends Component {
         <p>{this.props.msg}</p>
         <p>{this.props.model}</p>
         <p>{this.props.coolCars.map((item, i) => {
-          return  " " + item; 
+          return  " " + item;
         })}</p>
       </div>
     );
