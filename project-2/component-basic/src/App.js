@@ -7,6 +7,8 @@ class App extends Component {
   constructor(props){
     super(props)
     this.yourname = "Varada";
+
+    // default values when the constructor is called
     this.state = {}
   }
 
