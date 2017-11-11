@@ -24,11 +24,16 @@ class Parent extends Component {
     return(
       <div>
         <h2>Just some info</h2>
-        <Cars msg="Cars are cool" model="34756"/>
+        <Cars msg="Cars are cool" model="34756" coolCars={this.props.cars}/>
       </div>
     );
   }
 }
+
+Parent.defaultProps = {
+  cars: ['BMW', 'MERC', 'CITY', 'AUDI']
+}
+
 
 class Cars extends Component {
   render() {
@@ -38,6 +43,9 @@ class Cars extends Component {
         <h3>I am from cars component</h3>
         <p>{this.props.msg}</p>
         <p>{this.props.model}</p>
+        <p>{this.props.coolCars.map((item, i) => {
+          return  " " + item; 
+        })}</p>
       </div>
     );
   }
