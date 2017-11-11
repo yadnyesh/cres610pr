@@ -49,7 +49,7 @@ class Parent extends Component {
   }
 
   handleClick(){
-
+    this.setState({cars: this.state.cars.reverse()});
   }
 
   render() {
