@@ -14,6 +14,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+          <h3>prop number is {this.props.propNumber}</h3>
+          <h3>prop string is {this.props.propString}</h3>
+          <h3>prop Object is {this.props.propObject.obj1}</h3>
         <Parent />
       </div>
     );
