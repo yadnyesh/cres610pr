@@ -6,6 +6,7 @@ class App extends Component {
 
   constructor(props){
     super(props)
+    this.yourname = "Varada";
     this.state = {}
   }
 
@@ -17,7 +18,7 @@ class App extends Component {
     const myName = "Yadnyesh";
     return (
       <div className="App">
-        <h2> Sample Data for: {this.sayHello(myName)} </h2>
+        <h2> Sample Data for: {this.sayHello(this.yourname)} </h2>
       </div>
     );
   }
