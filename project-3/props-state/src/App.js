@@ -24,9 +24,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-  // propObject: React.PropTypes.object,
-  // propString: React.PropTypes.string,
-  // propNumber: React.PropTypes.number
   propObject: PropTypes.object,
   propString: PropTypes.string,
   propNumber: PropTypes.number
@@ -43,11 +40,17 @@ App.defaultProps = {
 }
 
 class Parent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cars: ['s-BMW', 's-MERC', 's-CITY', 's-AUDI']
+    };
+  }
   render() {
     return(
       <div>
         <h2>Just some info</h2>
-        <Cars msg="Cars are cool" model="34756" coolCars={this.props.cars}/>
+        <Cars msg="Cars are cool" model="34756" coolCars={this.state.cars}/>
       </div>
     );
   }
@@ -66,9 +69,9 @@ class Cars extends Component {
         <h3>I am from cars component</h3>
         <p>{this.props.msg}</p>
         <p>{this.props.model}</p>
-        <p>{this.props.coolCars.map((item, i) => {
-          return  " " + item;
-        })}</p>
+        <div>{this.props.coolCars.map((item, i) => {
+          return  <p key={i}>{item}</p>;
+        })}</div>
       </div>
     );
   }
