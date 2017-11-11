@@ -21,11 +21,14 @@ class App extends Component {
 class Body extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      r: 0
+    };
     this.getRandomNumber = this.getRandomNumber.bind(this);
   }
   getRandomNumber(){
-    console.log("Random number generator");
+    // console.log("Random number generator");
+    this.setState({r: Math.floor(Math.random()*10) })
   };
   render() {
     return(
@@ -34,6 +37,17 @@ class Body extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={this.getRandomNumber}>Random Number</button>
+        <Numbers myNumber={this.state.r} />
+      </div>
+    );
+  }
+}
+
+class Numbers extends Component {
+  render() {
+    return(
+      <div>
+        {this.props.myNumber}
       </div>
     );
   }
