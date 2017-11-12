@@ -321,3 +321,8 @@ footer {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px; }
+
+.ttt {
+  background: url(../img/home-bg.jpg);
+  background-image: url('img/home-bg.jpg');
+}
