@@ -3,14 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
-
-var divStyle = {
-//color: 'white',
-backgroundImage: 'url(img/home-bg.jpg)',
-WebkitTransition: 'all', // note the capital 'W' here
-msTransition: 'all' // 'ms' is the only lowercase vendor prefix
-//background-image: url('img/home-bg.jpg')"
-};
+import Header from './Header';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -18,19 +12,7 @@ class App extends Component {
     return (
       <div>
           <Navbar />
-          <header className="masthead" style={divStyle}>
-          <div className="overlay"></div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 col-md-10 mx-auto">
-                <div className="site-heading">
-                  <h1>Clean Blog</h1>
-                  <span className="subheading">A Blog Theme by Start Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          </header>
+          <Header />
 
           <div className="container">
           <div className="row">
@@ -96,42 +78,8 @@ class App extends Component {
           </div>
 
           <hr />
+          <Footer />
 
-          <footer>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 col-md-10 mx-auto">
-                <ul className="list-inline text-center">
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <span className="fa-stack fa-lg">
-                        <i className="fa fa-circle fa-stack-2x"></i>
-                        <i className="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <span className="fa-stack fa-lg">
-                        <i className="fa fa-circle fa-stack-2x"></i>
-                        <i className="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="#">
-                      <span className="fa-stack fa-lg">
-                        <i className="fa fa-circle fa-stack-2x"></i>
-                        <i className="fa fa-github fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-                <p className="copyright text-muted">Copyright &copy; Your Website 2017</p>
-              </div>
-            </div>
-          </div>
-          </footer>
       </div>
     );
   }
